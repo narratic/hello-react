@@ -23,20 +23,20 @@ declare interface Deal {
     isStale: boolean;
     highProbability: boolean;
     metrics: {
-        deal_age: number;
-        meetings_scheduled: number;
-        meetings_attended: number;
-        objections_raised: number;
-        objections_resolved: number;
-        competitor_mentions: number;
-        decision_maker_engaged: boolean;
+        dealAge: number;
+        meetingsScheduled: number;
+        meetingsAttended: number;
+        objectionsRaised: number;
+        objectionsResolved: number;
+        competitorMentions: number;
+        decisionMakerEngaged: boolean;
     };
     meddpicc: {
         metrics: number;
-        economic_buyer: number;
-        decision_criteria: number;
-        decision_process: number;
-        paper_process: number;
+        economicBuyer: number;
+        decisionCriteria: number;
+        decisionProcess: number;
+        paperProcess: number;
         implications: number;
         champion: number;
         competition: number;
@@ -58,10 +58,10 @@ declare interface Deal {
 
 declare interface DealBreakers {
     metrics: string | null;
-    economic_buyer: string | null;
-    decision_criteria: string | null;
-    decision_process: string | null;
-    paper_process: string | null;
+    economicBuyer: string | null;
+    decisionCriteria: string | null;
+    decisionProcess: string | null;
+    paperProcess: string | null;
     implications: string | null;
     champion: string | null;
     competition: string | null;
@@ -118,10 +118,10 @@ declare interface QualificationDetail {
 
 declare interface QualificationDetails {
     metrics: QualificationDetail[];
-    economic_buyer: QualificationDetail[];
-    decision_criteria: QualificationDetail[];
-    decision_process: QualificationDetail[];
-    paper_process: QualificationDetail[];
+    economicBuyer: QualificationDetail[];
+    decisionCriteria: QualificationDetail[];
+    decisionProcess: QualificationDetail[];
+    paperProcess: QualificationDetail[];
     implications: QualificationDetail[];
     champion: QualificationDetail[];
     competition: QualificationDetail[];
