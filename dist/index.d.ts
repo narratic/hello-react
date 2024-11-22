@@ -72,6 +72,12 @@ declare interface DealProgressProps {
     deal: Deal;
 }
 
+export declare function DealStakeholders({ deal }: DealStakeholdersProps): JSX_2.Element;
+
+declare interface DealStakeholdersProps {
+    deal: Deal;
+}
+
 declare type Props = {
     /** Set initial value */
     initialValue?: number;

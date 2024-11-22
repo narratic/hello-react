@@ -1,12 +1,10 @@
 import type { FC } from "react";
 import { useState } from "react";
-
-import { Counter, DealProgress } from "@/lib";
-import { DealHeader } from "@/lib/CounterDemo/DealHeader";
+import "@/styles.css";
 import { deals } from "@/data/mockData";
 import type { Deal } from "@/types";
 
-import "@/styles.css";
+import { Counter, DealProgress, DealHeader, DealStakeholders } from "@/lib";
 
 const App: FC = () => {
     const [currentDeal, setCurrentDeal] = useState<Deal>(deals[0]);
@@ -23,6 +21,7 @@ const App: FC = () => {
             <Counter />
             <DealHeader deal={currentDeal} onDealChange={handleDealChange} availableDeals={deals} />
             <DealProgress deal={currentDeal} />
+            <DealStakeholders deal={currentDeal} />
         </div>
     );
 };
