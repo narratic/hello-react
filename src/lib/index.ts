@@ -6,3 +6,5 @@ export { DealProgress } from "./CounterDemo/DealProgress";
 export { DealStakeholders } from "./CounterDemo/DealStakeholders";
 export { DealRisk } from "./CounterDemo/DealRisk";
 export { DealQualification } from "./CounterDemo/DealQualification";
+export { Toaster } from "@/components/ui/sonner";
+export { toast } from "sonner";
