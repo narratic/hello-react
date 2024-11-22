@@ -4,16 +4,15 @@ import { JSX as JSX_2 } from 'react/jsx-runtime';
 export declare const Counter: FC<Props>;
 
 declare interface Deal {
-    id: number;
     dealId: string;
     dealName: string;
     amount: number;
     probability: number;
     company: string;
     contacts: string;
-    status: 'Open' | 'Won' | 'Lost';
+    status: "Open" | "Won" | "Lost";
     lastUpdated: string;
-    dealStage: 'Discovery' | 'Solution Validation' | 'Pricing Communicated' | 'Contract Sent' | 'Closed Won' | 'Closed Lost';
+    dealStage: "Discovery" | "Solution Validation" | "Pricing Communicated" | "Contract Sent" | "Closed Won" | "Closed Lost";
     dealOwner: string;
     dealLanguage: string;
     nextInteraction: string | null;
@@ -53,10 +52,12 @@ declare interface Deal {
     hubspotUrl: string;
 }
 
-export declare function DealHeader({ deal }: DealHeaderProps): JSX_2.Element;
+export declare function DealHeader({ deal, onDealChange, availableDeals }: DealHeaderProps): JSX_2.Element;
 
 declare interface DealHeaderProps {
     deal: Deal;
+    onDealChange: (dealId: string) => void;
+    availableDeals: Deal[];
 }
 
 export declare const DealProgress: FC<DealProgressProps>;
@@ -72,7 +73,7 @@ declare type Props = {
 
 declare interface RecommendedAction {
     text: string;
-    priority: 'low' | 'medium' | 'high';
+    priority: "low" | "medium" | "high";
     type: string;
     completed: boolean;
     addedToHubspot: boolean;
@@ -80,7 +81,7 @@ declare interface RecommendedAction {
 
 declare interface RiskFactor {
     label: string;
-    level: 'low' | 'medium' | 'high';
+    level: "low" | "medium" | "high";
     info: string;
     category: string;
     details: string;
@@ -92,7 +93,7 @@ declare interface RiskFactor {
 declare interface Stakeholder {
     name: string;
     role: string;
-    engagementLevel: 'Low' | 'Medium' | 'High';
+    engagementLevel: "Low" | "Medium" | "High";
     contactLink: string;
 }
 
