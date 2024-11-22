@@ -89,7 +89,7 @@ export function DealHeader({ deal, onDealChange, availableDeals }: DealHeaderPro
 
                         <div className="space-y-1">
                             <div className="flex items-center gap-1">
-                                <p className="text-sm text-slate-500">Deal Lannguage</p>
+                                <p className="text-sm text-slate-500">Deal Language</p>
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger asChild>

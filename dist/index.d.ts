@@ -72,6 +72,12 @@ declare interface DealProgressProps {
     deal: Deal;
 }
 
+export declare function DealRisk({ deal }: DealRiskProps): JSX_2.Element;
+
+declare interface DealRiskProps {
+    deal: Deal;
+}
+
 export declare function DealStakeholders({ deal }: DealStakeholdersProps): JSX_2.Element;
 
 declare interface DealStakeholdersProps {
