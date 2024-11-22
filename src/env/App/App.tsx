@@ -5,15 +5,7 @@ import { deals } from "@/data/mockData";
 import type { Deal, HubspotTask } from "@/types";
 import { Toaster as Toastie } from "@/components/ui/sonner";
 import { toast } from "sonner";
-import {
-    DealProgress,
-    DealHeader,
-    DealStakeholders,
-    DealRisk,
-    DealQualification,
-    DealActions,
-    ActionPlan,
-} from "@/lib";
+import { DealProgress, DealHeader, DealStakeholders, DealRisk, DealQualification, ActionPlan } from "@/lib";
 
 const App: FC = () => {
     const [currentDeal, setCurrentDeal] = useState<Deal>(deals[0]);

@@ -2,13 +2,9 @@ import { FC } from 'react';
 import { JSX as JSX_2 } from 'react/jsx-runtime';
 import { Toaster } from 'sonner';
 
-export declare function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps_2): JSX_2.Element;
+export declare function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps): JSX_2.Element;
 
 declare interface ActionPlanProps {
-    deal: Deal;
-}
-
-declare interface ActionPlanProps_2 {
     deal: Deal;
     onHubspotTaskAdd?: (task: HubspotTask) => void;
 }
@@ -65,8 +61,6 @@ declare interface Deal {
     dealBreakers: DealBreakers;
     qualificationDetails: QualificationDetails;
 }
-
-export declare function DealActions({ deal }: ActionPlanProps): JSX_2.Element;
 
 declare interface DealBreakers {
     metrics: string | null;

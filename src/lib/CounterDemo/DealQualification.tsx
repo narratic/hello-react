@@ -30,9 +30,6 @@ export const DealQualification: FC<QualificationAnalysisProps> = ({ deal, onNavi
     };
 
     const getIcon = (key: string) => {
-        if (key === "implications") {
-            return Lightbulb;
-        }
         return getMEDDPICCIcon(key);
     };
 

@@ -37,17 +37,18 @@ const getPriorityColor = (priority: string) => {
 const getTaskTypeIcon = (type: string) => {
     switch (type) {
         case "call":
-            return <Phone className="w-4 h-4 text-slate-500" />;
+            return <Phone className="w-3 h-3 text-slate-500" />;
         case "email":
-            return <Mail className="w-4 h-4 text-slate-500" />;
+            return <Mail className="w-3 h-3 text-slate-500" />;
         case "to-do":
-            return <ListTodo className="w-4 h-4 text-slate-500" />;
+            return <ListTodo className="w-3 h-3 text-slate-500" />;
         default:
-            return <ListTodo className="w-4 h-4 text-slate-500" />;
+            return <ListTodo className="w-3 h-3 text-slate-500" />;
     }
 };
 
 function TaskItem({ task, onAddToHubspot }: { task: Task; onAddToHubspot: (taskId: string) => void }) {
+    console.log(task);
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,9 +57,9 @@ function TaskItem({ task, onAddToHubspot }: { task: Task; onAddToHubspot: (taskI
             className="flex items-start p-4 bg-slate-100 rounded-lg mb-2 hover:bg-slate-200 transition-colors"
         >
             <div className="flex items-start">
-                <div className="mr-3 mt-1">{getTaskTypeIcon(task.type)}</div>
                 <div>
                     <div className="flex items-center gap-2 mb-1">
+                        <div>{getTaskTypeIcon(task.type)}</div>
                         <span className={`text-xs ${getPriorityColor(task.priority)}`}>
                             {task.priority.charAt(0).toUpperCase() + task.priority.slice(1)}
                         </span>
