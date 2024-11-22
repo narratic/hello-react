@@ -37,6 +37,16 @@ export const deals: Deal[] = [
             champion: 1,
             competition: 3,
         },
+        dealBreakers: {
+            metrics: null,
+            economic_buyer: "Potential Deal Breaker: No budget authority confirmed",
+            decision_criteria: null,
+            decision_process: "Potential Deal Breaker: Procurement process unclear",
+            paper_process: null,
+            implications: null,
+            champion: null,
+            competition: null,
+        },
         riskFactors: [
             {
                 label: "Lack of Engagement with Decision Makers",
@@ -108,6 +118,56 @@ export const deals: Deal[] = [
         },
         riskScore: 8,
         hubspotUrl: "https://app.hubspot.com/deals/123/DEAL-18551702398",
+        qualificationDetails: {
+            metrics: [
+                { text: "Success metrics defined", completed: true },
+                { text: "ROI calculation completed", completed: false },
+                { text: "Current costs documented", completed: true },
+                { text: "Baseline metrics established", completed: false },
+            ],
+            economic_buyer: [
+                { text: "Economic buyer identified", completed: true },
+                { text: "Budget authority confirmed", completed: false },
+                { text: "Initial contact established", completed: true },
+                { text: "Direct meeting scheduled", completed: false },
+            ],
+            decision_criteria: [
+                { text: "Technical requirements documented", completed: true },
+                { text: "Business requirements clear", completed: true },
+                { text: "Success criteria defined", completed: false },
+                { text: "Evaluation criteria established", completed: true },
+            ],
+            decision_process: [
+                { text: "Decision timeline confirmed", completed: false },
+                { text: "Approval process documented", completed: false },
+                { text: "Key stakeholders identified", completed: true },
+                { text: "Decision committee established", completed: false },
+            ],
+            paper_process: [
+                { text: "Legal requirements understood", completed: true },
+                { text: "Procurement process clear", completed: false },
+                { text: "Contract review timeline set", completed: false },
+                { text: "Payment terms agreed", completed: false },
+            ],
+            implications: [
+                { text: "Pain points documented", completed: true },
+                { text: "Cost of inaction calculated", completed: true },
+                { text: "Business impact assessed", completed: true },
+                { text: "Risk assessment completed", completed: false },
+            ],
+            champion: [
+                { text: "Champion identified", completed: true },
+                { text: "Regular engagement established", completed: true },
+                { text: "Internal influence confirmed", completed: false },
+                { text: "Resource commitment secured", completed: false },
+            ],
+            competition: [
+                { text: "Competitive landscape mapped", completed: true },
+                { text: "Differentiators documented", completed: true },
+                { text: "Incumbent solution analyzed", completed: false },
+                { text: "Win strategy defined", completed: true },
+            ],
+        },
     },
     {
         dealId: "20079565168",
@@ -144,6 +204,16 @@ export const deals: Deal[] = [
             implications: 3,
             champion: 4,
             competition: 2,
+        },
+        dealBreakers: {
+            metrics: null,
+            economic_buyer: null,
+            decision_criteria: null,
+            decision_process: null,
+            paper_process: null,
+            implications: null,
+            champion: null,
+            competition: null,
         },
         riskFactors: [
             {
@@ -199,6 +269,56 @@ export const deals: Deal[] = [
         },
         riskScore: 6,
         hubspotUrl: "https://app.hubspot.com/deals/123/DEAL-20079565168",
+        qualificationDetails: {
+            metrics: [
+                { text: "Success metrics defined", completed: true },
+                { text: "ROI calculation completed", completed: false },
+                { text: "Current costs documented", completed: true },
+                { text: "Baseline metrics established", completed: false },
+            ],
+            economic_buyer: [
+                { text: "Economic buyer identified", completed: true },
+                { text: "Budget authority confirmed", completed: false },
+                { text: "Initial contact established", completed: true },
+                { text: "Direct meeting scheduled", completed: false },
+            ],
+            decision_criteria: [
+                { text: "Technical requirements documented", completed: true },
+                { text: "Business requirements clear", completed: true },
+                { text: "Success criteria defined", completed: false },
+                { text: "Evaluation criteria established", completed: true },
+            ],
+            decision_process: [
+                { text: "Decision timeline confirmed", completed: false },
+                { text: "Approval process documented", completed: false },
+                { text: "Key stakeholders identified", completed: true },
+                { text: "Decision committee established", completed: false },
+            ],
+            paper_process: [
+                { text: "Legal requirements understood", completed: true },
+                { text: "Procurement process clear", completed: false },
+                { text: "Contract review timeline set", completed: false },
+                { text: "Payment terms agreed", completed: false },
+            ],
+            implications: [
+                { text: "Pain points documented", completed: true },
+                { text: "Cost of inaction calculated", completed: true },
+                { text: "Business impact assessed", completed: true },
+                { text: "Risk assessment completed", completed: false },
+            ],
+            champion: [
+                { text: "Champion identified", completed: true },
+                { text: "Regular engagement established", completed: true },
+                { text: "Internal influence confirmed", completed: false },
+                { text: "Resource commitment secured", completed: false },
+            ],
+            competition: [
+                { text: "Competitive landscape mapped", completed: true },
+                { text: "Differentiators documented", completed: true },
+                { text: "Incumbent solution analyzed", completed: false },
+                { text: "Win strategy defined", completed: true },
+            ],
+        },
     },
     {
         dealId: "19929371719",
@@ -235,6 +355,16 @@ export const deals: Deal[] = [
             implications: 2,
             champion: 2,
             competition: 3,
+        },
+        dealBreakers: {
+            metrics: null,
+            economic_buyer: null,
+            decision_criteria: null,
+            decision_process: null,
+            paper_process: null,
+            implications: null,
+            champion: null,
+            competition: null,
         },
         riskFactors: [
             {
@@ -290,6 +420,56 @@ export const deals: Deal[] = [
         },
         riskScore: 7,
         hubspotUrl: "https://app.hubspot.com/deals/123/DEAL-19929371719",
+        qualificationDetails: {
+            metrics: [
+                { text: "Success metrics defined", completed: true },
+                { text: "ROI calculation completed", completed: false },
+                { text: "Current costs documented", completed: true },
+                { text: "Baseline metrics established", completed: false },
+            ],
+            economic_buyer: [
+                { text: "Economic buyer identified", completed: true },
+                { text: "Budget authority confirmed", completed: false },
+                { text: "Initial contact established", completed: true },
+                { text: "Direct meeting scheduled", completed: false },
+            ],
+            decision_criteria: [
+                { text: "Technical requirements documented", completed: true },
+                { text: "Business requirements clear", completed: true },
+                { text: "Success criteria defined", completed: false },
+                { text: "Evaluation criteria established", completed: true },
+            ],
+            decision_process: [
+                { text: "Decision timeline confirmed", completed: false },
+                { text: "Approval process documented", completed: false },
+                { text: "Key stakeholders identified", completed: true },
+                { text: "Decision committee established", completed: false },
+            ],
+            paper_process: [
+                { text: "Legal requirements understood", completed: true },
+                { text: "Procurement process clear", completed: false },
+                { text: "Contract review timeline set", completed: false },
+                { text: "Payment terms agreed", completed: false },
+            ],
+            implications: [
+                { text: "Pain points documented", completed: true },
+                { text: "Cost of inaction calculated", completed: true },
+                { text: "Business impact assessed", completed: true },
+                { text: "Risk assessment completed", completed: false },
+            ],
+            champion: [
+                { text: "Champion identified", completed: true },
+                { text: "Regular engagement established", completed: true },
+                { text: "Internal influence confirmed", completed: false },
+                { text: "Resource commitment secured", completed: false },
+            ],
+            competition: [
+                { text: "Competitive landscape mapped", completed: true },
+                { text: "Differentiators documented", completed: true },
+                { text: "Incumbent solution analyzed", completed: false },
+                { text: "Win strategy defined", completed: true },
+            ],
+        },
     },
 ];
 

@@ -244,7 +244,7 @@ export function DealRisk({ deal }: DealRiskProps) {
     // };
 
     return (
-        <Card className="bg-white shadow-sm border-slate-200">
+        <Card className="shadow-lg w-full max-w-3xl mx-auto my-8">
             <CardHeader>
                 <div className="flex items-center justify-between">
                     <CardTitle className="text-slate-800">Risk Assessment</CardTitle>

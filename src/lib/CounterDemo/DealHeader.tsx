@@ -25,7 +25,7 @@ export function DealHeader({ deal, onDealChange, availableDeals }: DealHeaderPro
     };
 
     return (
-        <Card className="bg-white shadow-sm border-slate-200">
+        <Card className="shadow-lg w-full max-w-3xl mx-auto my-8">
             <CardHeader>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                     <div className="space-y-2">

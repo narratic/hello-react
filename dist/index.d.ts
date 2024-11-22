@@ -50,6 +50,19 @@ declare interface Deal {
     };
     riskScore: number;
     hubspotUrl: string;
+    dealBreakers: DealBreakers;
+    qualificationDetails: QualificationDetails;
+}
+
+declare interface DealBreakers {
+    metrics: string | null;
+    economic_buyer: string | null;
+    decision_criteria: string | null;
+    decision_process: string | null;
+    paper_process: string | null;
+    implications: string | null;
+    champion: string | null;
+    competition: string | null;
 }
 
 export declare function DealHeader({ deal, onDealChange, availableDeals }: DealHeaderProps): JSX_2.Element;
@@ -72,6 +85,8 @@ declare interface DealProgressProps {
     deal: Deal;
 }
 
+export declare const DealQualification: FC<QualificationAnalysisProps>;
+
 export declare function DealRisk({ deal }: DealRiskProps): JSX_2.Element;
 
 declare interface DealRiskProps {
@@ -88,6 +103,27 @@ declare type Props = {
     /** Set initial value */
     initialValue?: number;
 };
+
+declare type QualificationAnalysisProps = {
+    deal: Deal;
+    onNavigate?: (path: string) => void;
+};
+
+declare interface QualificationDetail {
+    text: string;
+    completed: boolean;
+}
+
+declare interface QualificationDetails {
+    metrics: QualificationDetail[];
+    economic_buyer: QualificationDetail[];
+    decision_criteria: QualificationDetail[];
+    decision_process: QualificationDetail[];
+    paper_process: QualificationDetail[];
+    implications: QualificationDetail[];
+    champion: QualificationDetail[];
+    competition: QualificationDetail[];
+}
 
 declare interface RecommendedAction {
     text: string;

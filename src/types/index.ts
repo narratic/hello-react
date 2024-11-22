@@ -51,6 +51,8 @@ export interface Deal {
     };
     riskScore: number;
     hubspotUrl: string;
+    dealBreakers: DealBreakers;
+    qualificationDetails: QualificationDetails;
 }
 
 export interface Stakeholder {
@@ -97,4 +99,52 @@ export interface QuestionWithLabel {
     question: string;
     weighting: number;
     label: string;
+}
+
+export type MeddpiccCategory =
+    | "metrics"
+    | "economic_buyer"
+    | "decision_criteria"
+    | "decision_process"
+    | "paper_process"
+    | "implications"
+    | "champion"
+    | "competition";
+
+export interface MeddpiccScores {
+    metrics: number;
+    economic_buyer: number;
+    decision_criteria: number;
+    decision_process: number;
+    paper_process: number;
+    implications: number;
+    champion: number;
+    competition: number;
+}
+
+export interface DealBreakers {
+    metrics: string | null;
+    economic_buyer: string | null;
+    decision_criteria: string | null;
+    decision_process: string | null;
+    paper_process: string | null;
+    implications: string | null;
+    champion: string | null;
+    competition: string | null;
+}
+
+export interface QualificationDetail {
+    text: string;
+    completed: boolean;
+}
+
+export interface QualificationDetails {
+    metrics: QualificationDetail[];
+    economic_buyer: QualificationDetail[];
+    decision_criteria: QualificationDetail[];
+    decision_process: QualificationDetail[];
+    paper_process: QualificationDetail[];
+    implications: QualificationDetail[];
+    champion: QualificationDetail[];
+    competition: QualificationDetail[];
 }
