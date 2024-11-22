@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { JSX as JSX_2 } from 'react/jsx-runtime';
-import { Toaster as Toaster_2 } from 'sonner';
+import { Toaster } from 'sonner';
 
 declare interface ActionPlanProps {
     deal: Deal;
@@ -158,8 +158,8 @@ declare interface Stakeholder {
     contactLink: string;
 }
 
-export declare const Toaster: ({ ...props }: ToasterProps) => JSX_2.Element;
+declare type ToasterProps = React.ComponentProps<typeof Toaster>;
 
-declare type ToasterProps = React.ComponentProps<typeof Toaster_2>;
+export declare const Toastie2: ({ ...props }: ToasterProps) => JSX_2.Element;
 
 export { }

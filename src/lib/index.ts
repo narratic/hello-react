@@ -4,7 +4,7 @@ import "@/styles.css";
 export { Counter } from "./CounterDemo";
 
 // UI components
-export { Toaster } from "@/components/ui/sonner";
+export { Toaster as Toastie2 } from "@/components/ui/sonner";
 // export { toast } from "sonner";
 
 // Deal Components
