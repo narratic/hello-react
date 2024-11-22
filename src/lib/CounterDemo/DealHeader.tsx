@@ -7,10 +7,16 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { getLanguageName } from "@/lib/utils";
 import type { Deal } from "@/types";
 
+export interface DealMapping {
+    dealId: string;
+    dealName: string;
+    company: string;
+}
+
 export interface DealHeaderProps {
     deal: Deal;
     onDealChange: (dealId: string) => void;
-    availableDeals: Deal[];
+    availableDeals: DealMapping[];
 }
 
 export function DealHeader({ deal, onDealChange, availableDeals }: DealHeaderProps) {

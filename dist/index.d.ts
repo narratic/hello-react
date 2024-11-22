@@ -57,7 +57,13 @@ export declare function DealHeader({ deal, onDealChange, availableDeals }: DealH
 declare interface DealHeaderProps {
     deal: Deal;
     onDealChange: (dealId: string) => void;
-    availableDeals: Deal[];
+    availableDeals: DealMapping[];
+}
+
+declare interface DealMapping {
+    dealId: string;
+    dealName: string;
+    company: string;
 }
 
 export declare const DealProgress: FC<DealProgressProps>;
