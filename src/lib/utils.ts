@@ -25,15 +25,15 @@ export function getMEDDPICCIcon(category: string) {
     switch (category) {
         case "metrics":
             return Target;
-        case "economic_buyer":
+        case "economicBuyer":
             return User;
-        case "decision_criteria":
+        case "decisionCriteria":
             return FileText;
-        case "decision_process":
+        case "decisionProcess":
             return Users;
-        case "paper_process":
+        case "paperProcess":
             return FileText;
-        case "identification_pain":
+        case "identifyPain":
             return Zap;
         case "champion":
             return Award;

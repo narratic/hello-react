@@ -3,9 +3,9 @@ import { useState } from "react";
 import "@/styles.css";
 import { deals } from "@/data/mockData";
 import type { Deal } from "@/types";
-import { DealProgress, DealHeader, DealStakeholders, DealRisk, DealQualification } from "@/lib";
 import { Toaster as Toastie } from "@/components/ui/sonner";
 import { toast } from "sonner";
+import { DealProgress, DealHeader, DealStakeholders, DealRisk, DealQualification, DealActions } from "@/lib";
 
 const App: FC = () => {
     const [currentDeal, setCurrentDeal] = useState<Deal>(deals[0]);
@@ -30,6 +30,7 @@ const App: FC = () => {
             <DealStakeholders deal={currentDeal} />
             <DealRisk deal={currentDeal} />
             <DealQualification deal={currentDeal} onNavigate={handleNavigate} />
+            <DealActions deal={currentDeal} />
         </div>
     );
 };

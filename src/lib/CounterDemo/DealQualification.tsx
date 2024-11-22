@@ -24,9 +24,9 @@ export const DealQualification: FC<QualificationAnalysisProps> = ({ deal, onNavi
 
     const formatName = (name: string) => {
         return name
-            .split("_")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ");
+            .replace(/([A-Z])/g, " $1")
+            .replace(/^./, (str) => str.toUpperCase())
+            .trim();
     };
 
     const getIcon = (key: string) => {

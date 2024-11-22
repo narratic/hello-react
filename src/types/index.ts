@@ -36,7 +36,7 @@ export interface Deal {
         decisionCriteria: number;
         decisionProcess: number;
         paperProcess: number;
-        implications: number;
+        identifyPain: number;
         champion: number;
         competition: number;
     };
@@ -107,7 +107,7 @@ export type MeddpiccCategory =
     | "decisionCriteria"
     | "decisionProcess"
     | "paperProcess"
-    | "implications"
+    | "identifyPain"
     | "champion"
     | "competition";
 
@@ -117,7 +117,7 @@ export interface MeddpiccScores {
     decisionCriteria: number;
     decisionProcess: number;
     paperProcess: number;
-    implications: number;
+    identifyPain: number;
     champion: number;
     competition: number;
 }
@@ -128,7 +128,7 @@ export interface DealBreakers {
     decisionCriteria: string | null;
     decisionProcess: string | null;
     paperProcess: string | null;
-    implications: string | null;
+    identifyPain: string | null;
     champion: string | null;
     competition: string | null;
 }
@@ -144,7 +144,7 @@ export interface QualificationDetails {
     decisionCriteria: QualificationDetail[];
     decisionProcess: QualificationDetail[];
     paperProcess: QualificationDetail[];
-    implications: QualificationDetail[];
+    identifyPain: QualificationDetail[];
     champion: QualificationDetail[];
     competition: QualificationDetail[];
 }
