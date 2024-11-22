@@ -226,6 +226,10 @@ export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
         });
     };
 
+    console.log("i run");
+    console.log(tasks);
+    console.log("i run too");
+
     return (
         <Card className="shadow-lg w-full max-w-3xl mx-auto my-4 bg-slate-50">
             <CardHeader>
