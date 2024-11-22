@@ -68,7 +68,7 @@ function TaskItem({ task, onAddToHubspot }: { task: Task; onAddToHubspot: (taskI
                     <p className="text-slate-900 leading-snug">{task.title}</p>
                 </div>
             </div>
-            <div className="ml-auto">
+            <div className="ml-auto min-w-[144px] flex justify-end">
                 <Button
                     variant="ghost"
                     size="sm"
@@ -81,7 +81,7 @@ function TaskItem({ task, onAddToHubspot }: { task: Task; onAddToHubspot: (taskI
                     {task.addedToHubspot ? (
                         <>
                             <Check className="w-4 h-4 mr-1" />
-                            Added to Hubspot
+                            Added
                         </>
                     ) : (
                         "Add to Hubspot"
@@ -177,7 +177,6 @@ function HubspotDialog({
 }
 
 export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
-    const [tasks, setTasks] = useState<Task[]>(deal.recommendedActions);
     const [hubspotDialog, setHubspotDialog] = useState<HubspotTask>({
         dealId: deal.dealId,
         taskId: "",
@@ -187,10 +186,9 @@ export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
         notes: "",
         isOpen: false,
     });
-    const [isDialogOpen, setIsDialogOpen] = useState(false);
 
     const handleAddToHubspot = (taskId: string) => {
-        const task = tasks.find((t) => t.id === taskId);
+        const task = deal.recommendedActions.find((t) => t.id === taskId);
         if (task) {
             setHubspotDialog({
                 dealId: deal.dealId,
@@ -206,9 +204,6 @@ export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
 
     const handleHubspotDialogSubmit = () => {
         if (hubspotDialog.taskId) {
-            setTasks((prevTasks) =>
-                prevTasks.map((task) => (task.id === hubspotDialog.taskId ? { ...task, addedToHubspot: true } : task)),
-            );
             onHubspotTaskAdd?.({ ...hubspotDialog, isOpen: false });
             setHubspotDialog((prev) => ({ ...prev, isOpen: false }));
         }
@@ -226,10 +221,6 @@ export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
         });
     };
 
-    console.log("i run");
-    console.log(tasks);
-    console.log("i run too");
-
     return (
         <Card className="shadow-lg w-full max-w-3xl mx-auto my-4 bg-slate-50">
             <CardHeader>
@@ -244,7 +235,7 @@ export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
                 transition={{ duration: 0.5 }}
                 className="p-6"
             >
-                {tasks.map((task) => (
+                {deal.recommendedActions.map((task) => (
                     <TaskItem key={task.id} task={task} onAddToHubspot={handleAddToHubspot} />
                 ))}
                 <Button
@@ -253,7 +244,7 @@ export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
                     className="mt-2 text-slate-500 hover:text-slate-900"
                     size="sm"
                 >
-                    <Plus className="w-4 h-4 mr-2" />
+                    <Plus className="w-4 h-4 mr-1" />
                     Add task
                 </Button>
             </motion.div>
