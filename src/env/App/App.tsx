@@ -4,7 +4,7 @@ import { Counter } from "@/lib";
 // import { Button } from "@/components/ui/button";
 import { DealHeader } from "@/lib/CounterDemo/DealHeader";
 
-import "./index.css";
+import "@/styles.css";
 
 const App: FC = () => {
     return (
