@@ -2,8 +2,15 @@ import { FC } from 'react';
 import { JSX as JSX_2 } from 'react/jsx-runtime';
 import { Toaster } from 'sonner';
 
+export declare function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps_2): JSX_2.Element;
+
 declare interface ActionPlanProps {
     deal: Deal;
+}
+
+declare interface ActionPlanProps_2 {
+    deal: Deal;
+    onHubspotTaskAdd?: (task: HubspotTask) => void;
 }
 
 export declare const Counter: FC<Props>;
@@ -40,7 +47,7 @@ declare interface Deal {
         decisionCriteria: number;
         decisionProcess: number;
         paperProcess: number;
-        implications: number;
+        identifyPain: number;
         champion: number;
         competition: number;
     };
@@ -67,7 +74,7 @@ declare interface DealBreakers {
     decisionCriteria: string | null;
     decisionProcess: string | null;
     paperProcess: string | null;
-    implications: string | null;
+    identifyPain: string | null;
     champion: string | null;
     competition: string | null;
 }
@@ -106,6 +113,16 @@ declare interface DealStakeholdersProps {
     deal: Deal;
 }
 
+declare interface HubspotTask {
+    dealId: string;
+    taskId: string;
+    taskTitle: string;
+    taskType: "call" | "email" | "to-do";
+    dueDate: string;
+    notes: string;
+    isOpen?: boolean;
+}
+
 declare type Props = {
     /** Set initial value */
     initialValue?: number;
@@ -127,16 +144,17 @@ declare interface QualificationDetails {
     decisionCriteria: QualificationDetail[];
     decisionProcess: QualificationDetail[];
     paperProcess: QualificationDetail[];
-    implications: QualificationDetail[];
+    identifyPain: QualificationDetail[];
     champion: QualificationDetail[];
     competition: QualificationDetail[];
 }
 
 declare interface RecommendedAction {
-    text: string;
+    id: string;
+    title: string;
+    category: string;
     priority: "low" | "medium" | "high";
-    type: string;
-    completed: boolean;
+    type: "call" | "email" | "to-do";
     addedToHubspot: boolean;
 }
 

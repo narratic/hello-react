@@ -74,10 +74,11 @@ export interface RiskFactor {
 }
 
 export interface RecommendedAction {
-    text: string;
+    id: string;
+    title: string;
+    category: string;
     priority: "low" | "medium" | "high";
-    type: string;
-    completed: boolean;
+    type: "call" | "email" | "to-do";
     addedToHubspot: boolean;
 }
 
@@ -147,4 +148,23 @@ export interface QualificationDetails {
     identifyPain: QualificationDetail[];
     champion: QualificationDetail[];
     competition: QualificationDetail[];
+}
+
+export interface Task {
+    id: string;
+    title: string;
+    category: string;
+    priority: "low" | "medium" | "high";
+    type: "call" | "email" | "to-do";
+    addedToHubspot: boolean;
+}
+
+export interface HubspotTask {
+    dealId: string;
+    taskId: string;
+    taskTitle: string;
+    taskType: "call" | "email" | "to-do";
+    dueDate: string;
+    notes: string;
+    isOpen?: boolean;
 }

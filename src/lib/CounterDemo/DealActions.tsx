@@ -192,7 +192,7 @@ export function DealActions({ deal }: ActionPlanProps) {
                                         <label
                                             htmlFor={`action-${index}`}
                                             className={`text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
-                                                action.completed ? "line-through text-slate-400" : "text-slate-900"
+                                                action.completed ? "line-through text-slate-400" : ""
                                             }`}
                                         >
                                             {action.text}

@@ -44,7 +44,7 @@ export const DealQualification: FC<QualificationAnalysisProps> = ({ deal, onNavi
                         {/* Space must be manually added for constency with other card headers*/}
                         <CardTitle className="">Deal Qualification</CardTitle>
                         <p className="text-sm text-muted-foreground">
-                            Assess this deal's qualification strength according to MEDDPICC.
+                            Assess this deal's qualification strength according to MEDDPICC
                             {/* Draft explanation when making it interactive again */}
                             {/* You can adjust each criterion
                         to refine the prediction based on your knowledge. */}

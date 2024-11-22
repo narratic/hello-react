@@ -1,4 +1,90 @@
-import { Deal, ChartDataPoint } from "../types";
+import { Deal, ChartDataPoint, RecommendedAction } from "../types";
+
+const dealOneActions: RecommendedAction[] = [
+    {
+        id: "1",
+        title: "Schedule executive meeting with CFO to discuss budget allocation and ROI expectations",
+        category: "Planning",
+        priority: "high",
+        type: "call",
+        addedToHubspot: false,
+    },
+    {
+        id: "2",
+        title: "Send follow-up documentation on technical requirements and implementation timeline",
+        category: "Documentation",
+        priority: "medium",
+        type: "email",
+        addedToHubspot: false,
+    },
+    {
+        id: "3",
+        title: "Review and provide feedback on the new project proposal",
+        category: "Planning",
+        priority: "high",
+        type: "to-do",
+        addedToHubspot: false,
+    },
+    {
+        id: "4",
+        title: "Investigate and resolve technical objections from IT team",
+        category: "Development",
+        priority: "medium",
+        type: "to-do",
+        addedToHubspot: false,
+    },
+    {
+        id: "5",
+        title: "Create custom ROI calculator based on client's specific use case",
+        category: "Planning",
+        priority: "medium",
+        type: "to-do",
+        addedToHubspot: false,
+    },
+];
+
+const dealTwoActions: RecommendedAction[] = [
+    {
+        id: "6",
+        title: "Schedule follow-up call with Operations Manager to address outstanding concerns",
+        category: "Meeting",
+        priority: "high",
+        type: "call",
+        addedToHubspot: false,
+    },
+    {
+        id: "7",
+        title: "Update client documentation with latest API changes",
+        category: "Documentation",
+        priority: "medium",
+        type: "email",
+        addedToHubspot: false,
+    },
+    {
+        id: "8",
+        title: "Prepare comprehensive agenda for quarterly team meeting",
+        category: "Planning",
+        priority: "low",
+        type: "to-do",
+        addedToHubspot: false,
+    },
+    {
+        id: "9",
+        title: "Create implementation timeline and resource allocation plan",
+        category: "Planning",
+        priority: "high",
+        type: "to-do",
+        addedToHubspot: false,
+    },
+    {
+        id: "10",
+        title: "Create marketing assets for new product launch",
+        category: "Marketing",
+        priority: "medium",
+        type: "to-do",
+        addedToHubspot: false,
+    },
+];
 
 export const deals: Deal[] = [
     {
@@ -79,29 +165,7 @@ export const deals: Deal[] = [
                 lostDealFrequency: 35,
             },
         ],
-        recommendedActions: [
-            {
-                text: "Engage with the CFO to establish executive sponsorship.",
-                priority: "high",
-                type: "meeting",
-                completed: false,
-                addedToHubspot: false,
-            },
-            {
-                text: "Clarify the customer's decision-making process and timeline.",
-                priority: "medium",
-                type: "call",
-                completed: false,
-                addedToHubspot: false,
-            },
-            {
-                text: "Accelerate deal progression by scheduling a product demo for additional stakeholders.",
-                priority: "high",
-                type: "event",
-                completed: false,
-                addedToHubspot: false,
-            },
-        ],
+        recommendedActions: dealOneActions,
         keyStakeholders: [
             {
                 name: "Jane Smith",
@@ -237,22 +301,7 @@ export const deals: Deal[] = [
                 lostDealFrequency: 20,
             },
         ],
-        recommendedActions: [
-            {
-                text: "Provide a revised pricing structure with flexible options to address budget concerns.",
-                priority: "high",
-                type: "document",
-                completed: false,
-                addedToHubspot: false,
-            },
-            {
-                text: "Schedule an executive review to reinforce competitive advantages over other vendors.",
-                priority: "medium",
-                type: "meeting",
-                completed: false,
-                addedToHubspot: false,
-            },
-        ],
+        recommendedActions: dealTwoActions,
         keyStakeholders: [
             {
                 name: "Mark Davis",
@@ -388,22 +437,7 @@ export const deals: Deal[] = [
                 lostDealFrequency: 32,
             },
         ],
-        recommendedActions: [
-            {
-                text: "Hold a follow-up call to address unresolved objections with Operations Manager.",
-                priority: "high",
-                type: "call",
-                completed: false,
-                addedToHubspot: false,
-            },
-            {
-                text: "Prepare a comparative analysis to highlight unique value against competitors.",
-                priority: "medium",
-                type: "document",
-                completed: false,
-                addedToHubspot: false,
-            },
-        ],
+        recommendedActions: dealTwoActions,
         keyStakeholders: [
             {
                 name: "Linda Brown",
