@@ -4,7 +4,7 @@ import "@/styles.css";
 import { deals } from "@/data/mockData";
 import type { Deal } from "@/types";
 import { DealProgress, DealHeader, DealStakeholders, DealRisk, DealQualification } from "@/lib";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster as Toastie } from "@/components/ui/sonner";
 import { toast } from "sonner";
 
 const App: FC = () => {
@@ -23,7 +23,7 @@ const App: FC = () => {
 
     return (
         <div>
-            <Toaster position="bottom-center" />
+            <Toastie position="bottom-center" />
             {/* <Counter /> */}
             <DealHeader deal={currentDeal} onDealChange={handleDealChange} availableDeals={deals} />
             <DealProgress deal={currentDeal} />

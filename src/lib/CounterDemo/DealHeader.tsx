@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getLanguageName } from "@/lib/utils";
 import type { Deal } from "@/types";
 
@@ -30,7 +30,7 @@ export function DealHeader({ deal, onDealChange, availableDeals }: DealHeaderPro
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                     <div className="space-y-2">
                         <div className="flex items-center gap-3">
-                            <h2 className="text-xl font-semibold text-slate-900">{deal.dealName}</h2>
+                            <CardTitle>{deal.dealName}</CardTitle>
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild>

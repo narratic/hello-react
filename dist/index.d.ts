@@ -1,7 +1,10 @@
 import { FC } from 'react';
 import { JSX as JSX_2 } from 'react/jsx-runtime';
-import { toast } from 'sonner';
 import { Toaster as Toaster_2 } from 'sonner';
+
+declare interface ActionPlanProps {
+    deal: Deal;
+}
 
 export declare const Counter: FC<Props>;
 
@@ -55,6 +58,8 @@ declare interface Deal {
     dealBreakers: DealBreakers;
     qualificationDetails: QualificationDetails;
 }
+
+export declare function DealActions({ deal }: ActionPlanProps): JSX_2.Element;
 
 declare interface DealBreakers {
     metrics: string | null;
@@ -152,8 +157,6 @@ declare interface Stakeholder {
     engagementLevel: "Low" | "Medium" | "High";
     contactLink: string;
 }
-
-export { toast }
 
 export declare const Toaster: ({ ...props }: ToasterProps) => JSX_2.Element;
 
