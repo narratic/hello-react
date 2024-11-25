@@ -222,7 +222,7 @@ export function ActionPlan({ deal, onHubspotTaskAdd }: ActionPlanProps) {
     };
 
     return (
-        <Card className="shadow-lg w-full max-w-3xl mx-auto my-4 bg-slate-50">
+        <Card className="shadow-lg w-full max-w-3xl mx-auto my-4">
             <CardHeader>
                 <div className="flex items-center justify-between">
                     <CardTitle>Action Plan</CardTitle>

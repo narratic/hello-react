@@ -6,6 +6,7 @@ import type { Deal, HubspotTask } from "@/types";
 import { Toaster as Toastie } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { DealProgress, DealHeader, DealStakeholders, DealRisk, DealQualification, ActionPlan } from "@/lib";
+import { QualificationFramework } from "@/lib/qualification/QualificationFramework";
 
 const App: FC = () => {
     const [currentDeal, setCurrentDeal] = useState<Deal>(deals[0]);
@@ -35,6 +36,7 @@ const App: FC = () => {
             <DealRisk deal={currentDeal} />
             <DealQualification deal={currentDeal} onNavigate={handleNavigate} />
             <ActionPlan deal={currentDeal} onHubspotTaskAdd={handleHubspotTaskAdd} />
+            <QualificationFramework />
         </div>
     );
 };

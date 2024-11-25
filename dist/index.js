@@ -17213,7 +17213,7 @@ function dI({ deal: e, onHubspotTaskAdd: t }) {
       isOpen: !1
     });
   };
-  return /* @__PURE__ */ m.jsxs(ii, { className: "shadow-lg w-full max-w-3xl mx-auto my-4 bg-slate-50", children: [
+  return /* @__PURE__ */ m.jsxs(ii, { className: "shadow-lg w-full max-w-3xl mx-auto my-4", children: [
     /* @__PURE__ */ m.jsxs(oi, { children: [
       /* @__PURE__ */ m.jsx("div", { className: "flex items-center justify-between", children: /* @__PURE__ */ m.jsx(si, { children: "Action Plan" }) }),
       /* @__PURE__ */ m.jsx("p", { className: "text-sm text-muted-foreground", children: "Recommended actions to drive the deal forward" })

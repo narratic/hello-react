@@ -8,9 +8,9 @@ export { Toaster as Toastie2 } from "@/components/ui/sonner";
 // export { toast } from "sonner";
 
 // Deal Components
-export { DealHeader } from "./CounterDemo/DealHeader";
-export { DealProgress } from "./CounterDemo/DealProgress";
-export { DealStakeholders } from "./CounterDemo/DealStakeholders";
-export { DealRisk } from "./CounterDemo/DealRisk";
-export { DealQualification } from "./CounterDemo/DealQualification";
-export { ActionPlan } from "./CounterDemo/ActionPlan";
+export { DealHeader } from "./deals/DealHeader";
+export { DealProgress } from "./deals/DealProgress";
+export { DealStakeholders } from "./deals/DealStakeholders";
+export { DealRisk } from "./deals/DealRisk";
+export { DealQualification } from "./deals/DealQualification";
+export { ActionPlan } from "./deals/ActionPlan";
